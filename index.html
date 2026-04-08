@@ -8,68 +8,93 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #1d1d1f;
-            background: #f5f5f7;
-            padding: 20px;
+            background: #0f1012;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .container {
             max-width: 720px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 12px;
-            padding: 48px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin: 0 auto;
+            padding: 60px 24px;
+            flex: 1;
+        }
+        .logo-section {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .app-name {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+        .byline {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: rgba(255,255,255,0.4);
+            margin-top: 4px;
+        }
+        .byline::before, .byline::after {
+            content: "\2014";
+            margin: 0 8px;
+            color: rgba(46,107,56,0.6);
         }
         h1 {
             font-size: 28px;
             font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .updated {
-            font-size: 14px;
-            color: #86868b;
-            margin-bottom: 32px;
+            color: #fff;
+            margin-bottom: 16px;
         }
         h2 {
             font-size: 20px;
             font-weight: 600;
-            margin-top: 32px;
+            color: #fff;
+            margin-top: 36px;
             margin-bottom: 12px;
         }
         p, li {
             font-size: 15px;
-            color: #1d1d1f;
-            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #b0b0b0;
         }
+        p { margin-bottom: 12px; }
         ul {
-            padding-left: 24px;
+            padding-left: 20px;
             margin-bottom: 12px;
         }
         li { margin-bottom: 6px; }
+        a {
+            color: #2e6b38;
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
         .highlight {
-            background: #f0f7ff;
-            border-left: 3px solid #007aff;
+            background: rgba(46,107,56,0.1);
+            border-left: 3px solid #2e6b38;
             padding: 16px 20px;
             border-radius: 0 8px 8px 0;
             margin: 20px 0;
         }
         .highlight p { margin-bottom: 0; }
-        a { color: #007aff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e5e5;
+            padding: 24px;
             font-size: 13px;
-            color: #86868b;
+            color: rgba(255,255,255,0.25);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>ParaOps Privacy Policy</h1>
+        <div class="logo-section">
+            <div class="app-name">paraOPS</div>
+            <div class="byline">by TacLift</div>
+        </div>
+
+        <h1>Privacy Policy</h1>
         <p class="updated">Last updated: 20 March 2026</p>
 
         <div class="highlight">
@@ -96,13 +121,13 @@
         </ul>
 
         <h2>4. Third-Party Network Services</h2>
-        <p>ParaOps connects to the following external services solely to retrieve publicly available meteorological, geophysical, and elevation data. These requests contain only geographic coordinates (latitude/longitude) &mdash; no personal information is included.</p>
+        <p>ParaOps connects to external services solely to retrieve publicly available meteorological, geophysical, and elevation data. These requests contain only geographic coordinates (latitude/longitude) &mdash; no personal information is included.</p>
         <ul>
             <li><strong>NOAA NOMADS (GFS)</strong> &mdash; Global Forecast System wind and weather data.</li>
             <li><strong>Apple WeatherKit</strong> &mdash; Weather forecast data.</li>
             <li><strong>NOAA Geomagnetic API</strong> &mdash; Magnetic declination for a given coordinate.</li>
             <li><strong>Open-Elevation API</strong> &mdash; Terrain elevation (SRTM data) for a given coordinate.</li>
-            <li><strong>OpenTopography API</strong> &mdash; High-resolution DEM (Copernicus COP30) terrain data. Requires a user-provided API key, which is stored only on your device.</li>
+            <li><strong>OpenTopography API</strong> &mdash; High-resolution DEM terrain data. Requires a user-provided API key, stored only on your device.</li>
         </ul>
         <p>ParaOps does not control the privacy practices of these services. Please refer to their respective privacy policies for details.</p>
 
@@ -136,7 +161,7 @@
         <p><a href="mailto:paraOps.app@gmail.com">paraOps.app@gmail.com</a></p>
 
         <footer>
-            &copy; 2026 ParaOps. All rights reserved.
+            &copy; 2026 TacLift. All rights reserved.
         </footer>
     </div>
 </body>
